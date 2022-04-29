@@ -35,10 +35,12 @@ Product.init(
       },
     },
     category_id: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'category',
+        key: 'id',
+      },
     },
-    // define columns
   },
   {
     sequelize,

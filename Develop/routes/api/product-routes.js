@@ -13,7 +13,7 @@ router.get('/', async(req, res) => {
       [{ model: Category }, 
         { model: Tag, 
           through: ProductTag, 
-          as: 'tag' }],
+        }],
     });
     res.status(200).json(productData);
   } catch (err) {
@@ -30,7 +30,7 @@ router.get('/:id', async(req, res) => {
       [{ model: Category }, 
         {model: Tag, 
           through: ProductTag, 
-          as: 'tag' }],
+           }],
     });
 
     if (!productData) {
